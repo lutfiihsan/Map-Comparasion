@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Comparasion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="https://maps.google.com/maps/api/js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td width="300">
+                            <input id="input" type="text" name="input" class="form-control" placeholder="masukkan koordinat disini" value="-7.3344454, 112.7898796"> 
+                        </td>
+                        <td>
+                            <!-- <input id="button2" type="button" class="btn btn-info" onclick="tempel();" value="Paste"> -->
+                        </td>
+                        <td>
+                            <input id="button" type="button" class="btn btn-primary" value="Find">
+                        </td>
+                        <td width="110">                        
+                        </td>
+                        <td width="100">
+                            <label>Coordinat OSM</label>
+                        </td>
+                        <td width="300">
+                            <input id="cord2" type="text" name="cord2" class="form-control">
+                        </td>
+                        <td>   
+                            <input type="button" class="btn btn-success" onclick="clipboard();" value="Copy">                     
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div id="google"></div>
+                </div>
+                <div class="form-group" hidden>
+                    <!--mylocation-->
+                    <label>Kordinat Google :  </label>
+                    <input id="cord" type="text" name="cord" class="form-control">
+                </div>
+                <div class="form-group" hidden>
+                    <label>Kordinat OSM :  </label>
+                    <input id="temp2" type="hidden" name="temp2" class="form-control" value="-7.3344454, 112.7898796">
+                    <input id="temp" type="hidden" name="temp" class="form-control">
+                </div>
+            </div>
+            <div id="container-osm" class="col-md-6">
+                <!-- <div class="form-group"> -->
+                <div id="osm"><div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
